@@ -1,0 +1,95 @@
+.contact {
+    display: flex;
+    flex-direction: row;
+    $border-type: 1pt solid gray;
+    border-left: $border-type;
+    border-bottom: $border-type;
+    transition: 0.3s ease-out;
+    background: linear-gradient(white, rgb(238, 238, 238));
+    box-shadow: 0 0 0 black;
+
+    @keyframes deleting {
+        from {
+            transform: translateX(0);
+            opacity: 1;
+        }
+
+        to {
+            transform: translateX(120px);
+            opacity: 0;
+        }
+    }
+
+    &.deleting {
+        animation: deleting 1s ease-out forwards;
+    }
+
+    &:hover {
+        transform: translateX(52px) translateY(-12px) scale(1.05);
+        box-shadow: 0 0 35 black;
+        z-index: 1000;
+    }
+
+    img {
+        height: 100%;
+        border-radius: 100%;
+        padding: 1em;
+    }
+
+    .textes {
+        margin: 1em 0;
+        display: flex;
+        flex-direction: column;
+
+        h2 {
+            font-weight: bold;
+        }
+
+        span {
+            color: gray;
+        }
+
+        .number {
+            color: black;
+
+            &:hover {
+                background: gray;
+                color: white;
+                cursor: pointer;
+            }
+        }
+
+        button {
+            width: 10em;
+            outline: none;
+            border: none;
+
+            &:hover {
+                cursor: pointer;
+            }
+
+            &.delete-button {
+                margin-top: auto;
+                background: rgb(155, 14, 14);
+                color: white;
+
+                &:hover {
+                    background: red;
+                }
+            }
+
+            &.update-button {
+                background: orange;
+                color: white;
+
+                &:hover {
+                    background: rgb(255, 194, 79);
+                }
+            }
+        }
+
+        * {
+            margin: 0;
+        }
+    }
+}

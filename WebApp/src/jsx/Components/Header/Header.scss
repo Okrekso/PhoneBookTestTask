@@ -1,0 +1,39 @@
+header {
+    display: flex;
+    align-items: center;
+
+    background: linear-gradient(rgb(52, 52, 250), rgb(26, 26, 201));
+    color: white;
+    padding: 1em 2em;
+    text-decoration: none;
+
+    a {
+        color: inherit;
+        text-decoration: none;
+        margin: 0 10px;
+
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+
+    #search {
+        display: flex;
+        align-items: center;
+
+        img {
+            margin-right: 10px;
+            filter: brightness(0) invert(1);
+            height: 20px;
+        }
+    }
+
+    input {
+        outline: none;
+
+        &:focus,
+        &:active {
+            outline: none;
+        }
+    }
+}

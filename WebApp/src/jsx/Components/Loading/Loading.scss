@@ -1,0 +1,17 @@
+@keyframes blob {
+    from {
+        transform: scale(1);
+    }
+
+    to {
+        transform: scale(1.1);
+    }
+}
+
+.loading-circle {
+    align-self: center;
+    width: 2em;
+    height: 2em;
+    border-radius: 100%;
+    animation: blob 0.3s ease-in-out alternate infinite;
+}
